@@ -1,0 +1,83 @@
+﻿@model TestKMP.Models.Performance
+
+    <div class="jumbotron">
+        <h3 style="color:gray;padding-bottom:5px; text-align:center">Perfomance Comparison of String Matching Algorithms</h3>
+
+        <h4 style="text-align:center"><b style="color:steelblue">Knuth-Morris-Pratt (KMP)</b> vs <b style="color:tomato">Boyer-Moore (BM)</b> vs <b style="color:midnightblue">Naive Algorithm</b> </h4>
+
+        <br /><br />
+        <p>Testing on real SARS Bilogical Sequence Dataset:</p>
+        <p>Search for string "TACCCAGGAAAAGCC" or "AAAA" or "CG" for initial test.</p>
+
+              <p class="lead">
+
+                  <div style="margin-top:30px;">
+                      @using (Html.BeginForm("Search", "Home", FormMethod.Post))
+                      {
+                          var KMPselected = "";
+                          var BMselected = "";
+                          var Nselected = "";
+                          var SearchTerm = "";
+                          if (Model != null)
+                          {
+                              Nselected = Model.SearchTerm.Algorithm == 3 ? "selected" : "";
+                              KMPselected = Model.SearchTerm.Algorithm == 1 ? "selected" : "";
+                              BMselected = Model.SearchTerm.Algorithm == 2 ? "selected" : "";
+                              SearchTerm = Model.SearchTerm.SearchText;
+                          }
+
+                          <select name="Algorithm" style="width:100%; padding: 10px; max-width:100%; margin-bottom: 20px;">
+                              <option value="1" @KMPselected>KMP</option>
+                              <option value="2" @BMselected>BM</option>
+                              <option value="3" @Nselected>Naive</option>
+                          </select>
+
+                          <input type="text" name="SearchText" style="width:100%; padding: 10px; max-width:100%;" value="@SearchTerm" />
+                          <button type="submit" style="width:100%; padding: 10px; max-width:100%; margin-top: 20px;">Search</button>
+                      }
+                  </div>
+                  <br />
+
+                  @{
+                      if (Model != null)
+                      {
+                          if (Model.Indexes != null && Model.Indexes.Count > 0)
+                          {
+
+                              <h5>Pattern <b style="color:darkred"> @Model.SearchTerm.SearchText </b> was found<b style="color:darkred"> @Model.Indexes.Count </b> times.</h5>
+
+                          }
+
+                          <h4>Time Usage Stats:</h4>
+                          <h5>Running Time:  <b style="color:darkred">@Model.TotalRunningTime ms</b> </h5>
+
+                          <h5>Sum ( Number Of Times Statements Executed ):  <b style="color:darkred">@Model.GetTotalNumberStatements()</b> </h5>
+
+
+                          <hr />
+                          <h4>Memory Usage Stats:</h4>
+
+                          <h5>Initial Memory:  <b style="color:darkred">@Model.InitialMemory MB</b> </h5>
+
+                          <h5>Total Memory Consumed:  <b style="color:darkred">@Model.TotalMemoryConsumed MB</b> </h5>
+
+                          <h5>
+                              Memory Consumed By Algorithm:  <b style="color:darkred">@Model.MemoryConsumedByProcess MB</b>
+                              <br />
+                              <span style="font-size:9px;color:cadetblue">(Including statistics storage and number of statements space )</span> 
+                          </h5>
+
+
+
+                      }
+                      else
+                      {
+                          <h5>No matches enter text to be matched.</h5>
+                      }
+                  }
+
+              </p>
+
+    </div>
+
+
