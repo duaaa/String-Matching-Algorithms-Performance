@@ -53,13 +53,21 @@ namespace TestKMP.Models.Utils
 					s += Math.Max(1, j - badChar[text[s + j]]);
 				}
 			}
-			var s2Memory = GC.GetTotalMemory(false);
-			var ttt = s2Memory - sMemory;
 			stopwatch.Stop();
+
+			var s2Memory = GC.GetTotalMemory(false);
+
+			var MemoryConsumedByProcess = (s2Memory - sMemory) / 1000000;
+			var InitialMemory = (sMemory) / 1000000;
+			var TotalMemoryConsumed = (s2Memory) / 1000000;
+
+			p.MemoryConsumedByProcess = MemoryConsumedByProcess;
+			p.InitialMemory = InitialMemory;
+			p.TotalMemoryConsumed = TotalMemoryConsumed;
+
 			p.TotalRunningTime = stopwatch.ElapsedMilliseconds;
 			p.Indexes = result;
 			p.NoTimesStatementExecuted = NoOfTimesStatementsExecuted;
-
 			return p;
 		}
 		private void BadCharHeuristic(string str, int size, ref int[] badChar)

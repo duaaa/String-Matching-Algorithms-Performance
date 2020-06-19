@@ -13,7 +13,7 @@ namespace TestKMP.Models.Utils
         {
             Performance p = new Performance();
             Stopwatch stopwatch = Stopwatch.StartNew();
-
+            var sMemory = GC.GetTotalMemory(false);
             List<SearchInfo> result = new List<SearchInfo>();
 
             NoOfTimesStatementsExecuted.Add(new Statement { StatementNumber = 1 });
@@ -55,10 +55,20 @@ namespace TestKMP.Models.Utils
             }
 
             stopwatch.Stop();
+
+            var s2Memory = GC.GetTotalMemory(false);
+
+            var MemoryConsumedByProcess = (s2Memory - sMemory) / 1000000;
+            var InitialMemory = (sMemory) / 1000000;
+            var TotalMemoryConsumed = (s2Memory) / 1000000;
+
+            p.MemoryConsumedByProcess = MemoryConsumedByProcess;
+            p.InitialMemory = InitialMemory;
+            p.TotalMemoryConsumed = TotalMemoryConsumed;
+
             p.TotalRunningTime = stopwatch.ElapsedMilliseconds;
             p.Indexes = result;
             p.NoTimesStatementExecuted = NoOfTimesStatementsExecuted;
-
             return p;
         }
     }
