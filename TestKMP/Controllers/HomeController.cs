@@ -9,6 +9,8 @@ using TestKMP.Models.Utils;
 using System.Threading;
 using System.IO;
 using System.Text;
+using System.Web.Configuration;
+using System.Configuration;
 
 namespace TestKMP.Controllers
 {
@@ -22,8 +24,10 @@ namespace TestKMP.Controllers
         {
             // Initialize the dataset
             DataSet d = new DataSet();
-            string text = d.textData(@"C:\Users\Dua\source\repos\TestKMP\TestKMP\Models\DataSets\sars_quarter.txt");
+      
+            string filename = AppDomain.CurrentDomain.BaseDirectory + "Models\\DataSets\\" + ConfigurationManager.AppSettings["DataSetFile"];
 
+            string text = d.textData(filename);
             // Get search pattern from the input from model
             string pat = model.SearchText;
             Performance result = new Performance();
