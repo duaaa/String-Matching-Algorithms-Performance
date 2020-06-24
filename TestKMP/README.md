@@ -11,9 +11,9 @@
     Intially contains in built Severe Acute Respiratory Syndrome (SARS) dataset which can be replaced within the dataset class. 
     </p>
     <p>Basically gives you a performance statistics based on the following parameters:
-        1. Running Time /n
-        2. Indexes Found
-        3. Number of lines executed
+        1. Running Time <br/>
+        2. Indexes Found <br/>
+        3. Number of lines executed<br/>
         4. Space / Memory Consumed </p>
         
    
