@@ -11,12 +11,12 @@
     Intially contains in built Severe Acute Respiratory Syndrome (SARS) dataset which can be replaced within the dataset class. 
     </p>
     <p>Basically gives you a performance statistics based on the following parameters:
-        1. Running Time
+        1. Running Time /n
         2. Indexes Found
         3. Number of lines executed
-        4. Space / Memory Consumed
+        4. Space / Memory Consumed </p>
         
-    </p>
+   
 <p><h3> Knuth Morris Pratt (KMP)</h3> is an algorithm, which checks the characters from left to right.
 When a pattern has a sub-pattern appears more than once in the sub-pattern, 
 it uses that property to improve the time complexity, as well as in the worst case scenario. The processing time of KMP is O(m) and 
