@@ -44,7 +44,7 @@ Futher, Our home controller is set as the startup call to our the search models.
 <p> In the searchInfo.cs class we have three classes <b>Performance</b> in which we 
 have parameters of no of statements executed as we are doing in list and the parameter to check the memory consumption.
 <b>Search Info</b> is also a class which contains the parameters that get the use's choice for the algorithm that is to be executed.
-<b>Statement</b> class which contain a parameter statementnumber which counts the no.of times a statement is executed.
+<b>Statement</b> class which contain a parameter statementnumber which counts the no of times a statement is executed.
 
 </p>
 <h3>Installation</h3>
@@ -57,6 +57,6 @@ mduaaas@gmail.com
 <h3>Contributing</h3>
 <p>As this is a private project no one from the outside is allowed to contribute in it.</p>
 <h3>Authors</h3>
-<p>Dua and Sahar made this project.</p>
+<p>Made by Dua and Sahar.</p>
 </body>
 </html>
