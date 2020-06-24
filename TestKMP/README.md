@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <title>String Matching Project</title>
+    <h1>String Matching Project</h1>
 </head>
 <body>
 <h5>Description</h5>
