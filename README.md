@@ -3,7 +3,7 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <h1>String Matching Project</h1>
+    <h1>Perfomance Analysis of String Matching Algorithms</h1>
 </head>
 <body>
 <h3>Description</h3>
