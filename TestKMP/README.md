@@ -5,21 +5,21 @@
     <h1>String Matching Project</h1>
 </head>
 <body>
-<h5>Description</h5>
+<h3>Description</h3>
 <p>This project is related to the String Matching with KMP, BM and Navie algorithm.</p>
-<p><h5> Knuth Morris Pratt (KMP)</h5> is an algorithm, which checks the characters from left to right.
+<p><h3> Knuth Morris Pratt (KMP)</h3> is an algorithm, which checks the characters from left to right.
 When a pattern has a sub-pattern appears more than one in the sub-pattern, 
 it uses that property to improve the
 time complexity, also for in the worst case. The processing time of KMP is O(m) and 
 its time complexity of KMP is O(n).</p>
-<p> <h5>Naïve pattern searching</h5>is the simplest method among other pattern searching algorithms. 
+<p> <h3>Naïve pattern searching</h3>is the simplest method among other pattern searching algorithms. 
 It checks for all character of the main string to the pattern.
 This algorithm is helpful for smaller texts. It does not need any pre-processing phases.
 The time complexity is O(m*n) where m is the size of pattern and n is the size 
 of the main string</p>
-<p><h5>
+<p><h3>
 Boyer–Moore 
-</h5>
+</h3>
  string-search algorithm is an efficient method 
  that is the standard benchmark for practical string-search literature. 
  It was developed by Robert S. Boyer and J Strother Moore in 1977.
@@ -32,10 +32,10 @@ We also have a dataset in the Models/Dataset folder in which we contain the data
 which we are using in our algorithm. We get our dataset from the https://www.kaggle.com/datasets 
 . Futher, we also have a controller as a main function to call our the models according 
 to the user's choice. </p>
-<p> In the searchInfo.cs class we have three classes <h5>Performance</h5> in which we 
+<p> In the searchInfo.cs class we have three classes <b>Performance</b> in which we 
 have parameters of no.ofstatementexecuted as we are doing in list and the parameter to check the memory consumption.
-<h5>Search Info</h5> is also a class which contains the parameters that get the use's choice for the algorithm that is to be executed.
-<h5>Statement</h5> class which contain a parameter statementnumber which counts the no.of times a statement is executed.
+<b>Search Info</b> is also a class which contains the parameters that get the use's choice for the algorithm that is to be executed.
+<b>Statement</b> class which contain a parameter statementnumber which counts the no.of times a statement is executed.
 
 </p>
 <h3>Installation</h3>
