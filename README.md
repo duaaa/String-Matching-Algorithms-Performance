@@ -48,7 +48,7 @@ have parameters of no of statements executed as we are doing in list and the par
 
 </p>
 <h3>Installation</h3>
-<p>Before executing this project, you have to change the path of getting the dataset's file according to your PC.</p>
+<p>Before executing this project, you can add any other geneome sequence file by changing the value of DataSetFile key in webConfig file. And placing your dataset csv file in Models\DataSets folder.</p>
 <h3>Support</h3>
 <p>If you need any help, you can contact us through our emails.
 seharejaz1997@gmail.com OR 
