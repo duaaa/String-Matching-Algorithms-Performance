@@ -6,9 +6,16 @@
 </head>
 <body>
 <h3>Description</h3>
-<p>A simple solution for String Matching using KMP, BM and Navie algorithm.</p>
+<p>A simple solution for the Perfomance Analysis of String Matching Algorithms (KMP, BM and Navie algorithm).</p>
 <p>This code repository makes the task of searching for a genome sequence easier with a built in .Net MVC user interface.
     Intially contains in built Severe Acute Respiratory Syndrome (SARS) dataset which can be replaced within the dataset class. 
+    </p>
+    <p>Basically gives you a performance statistics based on the following parameters:
+        1. Running Time
+        2. Indexes Found
+        3. Number of lines executed
+        4. Space / Memory Consumed
+        
     </p>
 <p><h3> Knuth Morris Pratt (KMP)</h3> is an algorithm, which checks the characters from left to right.
 When a pattern has a sub-pattern appears more than once in the sub-pattern, 
